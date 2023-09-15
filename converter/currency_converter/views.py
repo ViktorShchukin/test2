@@ -15,7 +15,7 @@ def convert(request):
             return HttpResponse(content="wrong currency name", status=400)
         required_value = Decimal(request.GET.get('value'))
         result= convert1(from_currency=from_cur, to_currency=to_cur, value=int(required_value), service=None)
-        return JsonResponse({'result':result})
+        return JsonResponse({'result':result, 'currency': to_cur})
     except InvalidOperation:
         return HttpResponse(content="wrong value",status=400)
     except RequestException as exception:
