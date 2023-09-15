@@ -1,10 +1,18 @@
-from currency_converter.core.request_for_currency import request
+from currency_converter.core.request_for_currency import get_currency_rate
 
 
-def convert1(from_currency, to_currency, value, service=None):
-    result = request(from_currency, to_currency, service)
+def do_convert(from_currency, to_currency, value, service=None):
+    """
+    Конвертирует валюту
+    :param from_currency: код валюты из которой конвертируем
+    :param to_currency: код валюты в которую конвертируем
+    :param value: конвертируемое значение
+    :param service: наименование используемого сервиса
+    :return: конвертированное значение
+    """
+    result = get_currency_rate(from_currency, to_currency, service)
     converted = value * result
     return converted
 
 if __name__ == '__main__':
-    convert('USD','RUB',2)
+    do_convert('USD','RUB',2)
