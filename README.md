@@ -15,7 +15,7 @@
 ## Архитектура приложения
 
 Вся логика приложения вынесена в
-отдельный пакет converter.currency_converter.core
+отдельный пакет **converter.currency_converter.core**
 и не зависит от протокола взаимодействия 
 client/server. 
 
