@@ -74,3 +74,7 @@ $ docker build --tag py-converter .
 ```bash
 $ docker run --network host py-converter
 ```
+Проверьте что сервис работает корректно 
+```bash
+$ curl "http://localhost:8000/currency_converter?from=USD&to=RUB&value=2"
+```
