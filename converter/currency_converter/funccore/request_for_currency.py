@@ -2,7 +2,10 @@ import requests
 import re
 from decimal import *
 
-from currency_converter.core.exceptions import RequestException
+
+from .exceptions import RequestException
+
+
 def get_currency_rate(from_currency, to_currency, service=None):
     """
     Запрос курса валют выполняется с помощью внешнего сервиса

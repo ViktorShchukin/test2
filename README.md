@@ -35,7 +35,7 @@ client/server.
 ### Конвертация валюты
 
 Конвертация выполняется при отправки http запроса
-**GET /currency_converter?from=USD&to=RUB&value=2**  
+**GET /currency_converter/oop?from=USD&to=RUB&value=2**  
 Параметры запроса:
 
 |  Наименование  | Пример значения  | Описание                                       |
@@ -76,5 +76,5 @@ $ docker run --network host py-converter
 ```
 Проверьте что сервис работает корректно 
 ```bash
-$ curl "http://localhost:8000/currency_converter?from=USD&to=RUB&value=2"
+$ curl "http://localhost:8000/currency_converter/oop?from=USD&to=RUB&value=2"
 ```

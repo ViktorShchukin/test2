@@ -1,4 +1,4 @@
-from currency_converter.core.request_for_currency import get_currency_rate
+from .request_for_currency import get_currency_rate
 
 
 def do_convert(from_currency, to_currency, value, service=None):

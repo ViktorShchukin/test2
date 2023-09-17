@@ -4,5 +4,6 @@ from . import views
 
 
 urlpatterns = [
-    path("", views.convert, name="index"),
+    path("func", views.func_convert, name="index"),
+    path("oop", views.oop_convert, name="opp_convert")
 ]
