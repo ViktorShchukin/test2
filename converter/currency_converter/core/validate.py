@@ -3,7 +3,7 @@ def currency_normalize(currency):
     """
     Проверяет правильность значений кодов валют
     :param currency: проверяемой код
-    :return: провверений код или None если код неправильный
+    :return: проверенный код или None если код неправильный
     """
     if type(currency) is str:
         standart_curency = currency.upper()
